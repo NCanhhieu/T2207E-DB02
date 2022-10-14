@@ -19,11 +19,7 @@ Qty int not null,
 STT int,
 ConsumerID int foreign key references Consumers(ID) not null
 );
-Create table ConsumerOrder(
-ConsumerID int foreign key references Consumers(ID) not null,
-ProductID int foreign key references Products(ID) not null
 
-);
 Create table ProductOrder(
 ProductID int foreign key references Products(ID) not null,
 OrderCode int foreign key references Orders(Code) not null
